@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #f8fbff;
+  background: #10131b url("legacy-background.png") center / cover fixed;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(8, 10, 16, 0.78), rgba(8, 10, 16, 0.36)),
+    linear-gradient(180deg, rgba(8, 10, 16, 0.16), rgba(8, 10, 16, 0.82));
+}
+
+.shell {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.hero,
+.content {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(13, 18, 30, 0.82);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.hero {
+  padding: 36px;
+}
+
+.hero.compact {
+  padding-bottom: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #ffc45f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 12px;
+  color: #ffd680;
+  font-size: 1.2rem;
+}
+
+.lead {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: #eef3ff;
+  font-size: 1.2rem;
+  line-height: 1.55;
+}
+
+.actions {
+  margin-top: 28px;
+}
+
+a {
+  color: #fff;
+  text-decoration-color: rgba(255, 196, 95, 0.85);
+  text-underline-offset: 4px;
+}
+
+.actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 196, 95, 0.55);
+  background: rgba(255, 137, 34, 0.18);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.content {
+  margin-top: 18px;
+  padding: 34px 36px;
+}
+
+.content p,
+.content li {
+  color: #dfe7f5;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.content ul {
+  margin: 0 0 28px;
+  padding-left: 22px;
+}
+
+.content h2:not(:first-child) {
+  margin-top: 30px;
+}
+
+.back-link {
+  margin-top: 32px;
+}
+
+@media (max-width: 640px) {
+  .shell {
+    width: min(100% - 20px, 980px);
+    padding: 20px 0;
+  }
+
+  .hero,
+  .content {
+    padding: 24px;
+  }
+
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
