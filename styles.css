@@ -90,6 +90,9 @@ h2 {
 }
 
 .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 28px;
 }
 
@@ -109,6 +112,12 @@ a {
   color: #fff;
   font-weight: 700;
   text-decoration: none;
+}
+
+.actions a.primary {
+  border-color: rgba(255, 255, 255, 0.78);
+  background: #ff8a22;
+  color: #10131b;
 }
 
 .content {
